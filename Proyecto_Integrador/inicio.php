@@ -10,7 +10,7 @@
 <body>
   <header>
     <!--comienzo barra de navegador -->
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-ligh sticky-top">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-ligh fixed-top">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>
@@ -18,12 +18,10 @@
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>
-  <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
-    <div class="navbar-nav mr-auto">
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
       <a class="nav-item nav-link active" href="inicio.php">Inicio<span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link active" href="#">Preguntas frecuentes</a>
-    </div>
-    <div class="navbar-nav">
       <a class="nav-item nav-link active" href="#">Iniciar sesion<span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link active" href="#">Resgistrarse</a>
     </div>
@@ -110,6 +108,14 @@
 </article>
 
 <!--fin card -->
+
+<article class="container mt-5 pt-5">
+<footer>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+</footer>
+</article>
 </section>
 
 
