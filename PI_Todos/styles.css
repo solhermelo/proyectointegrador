@@ -1,3 +1,9 @@
+*{
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}
 .container2
 {
   background-image: url(imagenes/grass.jpg);
@@ -38,7 +44,8 @@ nav
   opacity: 0.8;
   color: white;
   border-radius: 5px;
-  padding-left: 10px;
+  padding: 10px;
+  font-size: 40px;
   font-family: sans-serif;
 }
 
@@ -57,10 +64,15 @@ nav
   color:SlateGray;
   background-color: white;
   font-weight:lighter;
-  font-size: 20px;
+  font-size: 17px;
   font-family: sans-serif;
   padding-left: 17px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 17px;
   background-color: rgba(255,255,255,0.8) !important;
+  border-radius: 3px;
+  margin-bottom: 10px;
 }
 
 .item
@@ -71,48 +83,108 @@ nav
   display: inline;
 }
 
-
-@@media only screen and (max-width: 1200px) {
-	.login-box{
-    width: 40%;
-    margin-left: 5%;
-    margin-right: 5%;
-    float:left
-}
-
-@@media only screen and (max-width: 992px) {
-  .login-box{
-    width: 40%;
-    margin-left: 5%;
-    margin-right: 5%;
-    float:left
-}
-
-@@media only screen and (max-width: 768px) and (orientation: landscape){
-  .login-box{
-    width: 40%;
-    height: 80%;
-    margin-left: 5%;
-    margin-right: 5%;
-    float:left
+@media (min-width:360px)
+{
+  .div_1
+  {
+    width: 70%;
   }
-  body{
-    background-repeat: no-repeat;
+  .titulo
+  {
+    font-size: 28px;
   }
+  .preguntas
+  {
+    font-size:17px;
+  }
+  .respuesta
+  {
+    font-size: 13px;
+  }
+
 }
 
-@@media only screen and (max-width: 480px) {
-  .login-box{
-    width: 40%;
-    margin-left: 5%;
-    margin-right: 5%;
-    float:left
+@media (min-width:750px)
+{
+  .div_1
+  {
+    width: 70%;
+  }
+  .titulo
+  {
+    font-size: 31px;
+  }
+  .preguntas
+  {
+    font-size:19px;
+  }
+  .respuesta
+  {
+    font-size: 14px;
+  }
+
 }
 
-@@media only screen and (max-width: 320px) {
-  .login-box{
-    width: 40%;
-    margin-left: 5%;
-    margin-right: 5%;
-    float:left
+@media (min-width: 950px)
+{
+  .div_1
+  {
+    width: 70%;
+  }
+  .titulo
+  {
+    font-size: 34px;
+  }
+  .preguntas
+  {
+    font-size:21px;
+  }
+  .respuesta
+  {
+    font-size: 15px;
+  }
+
+
+}
+
+@media (min-width:1150px)
+{
+  .div_1
+  {
+    width: 70%;
+  }
+  .titulo
+  {
+    font-size: 37px;
+  }
+  .preguntas
+  {
+    font-size:23px;
+  }
+  .respuesta
+  {
+    font-size: 16px;
+  }
+
+}
+
+@media (min-width:1366px)
+{
+  .div_1
+  {
+    width: 70%;
+  }
+  .titulo
+  {
+    font-size: 40px;
+  }
+  .preguntas
+  {
+    font-size:25px;
+  }
+  .respuesta
+  {
+    font-size: 17px;
+  }
+
 }
