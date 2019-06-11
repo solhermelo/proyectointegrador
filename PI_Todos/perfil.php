@@ -1,5 +1,9 @@
 <?php
 require_once("funciones.php");
+if(!isset($_SESSION["email"])){
+    header("location: iniciosesion.php");
+    exit;
+}
  ?>
 
 <!DOCTYPE html>
@@ -27,11 +31,11 @@ require_once("funciones.php");
           <div class="navbar-nav ml-auto">
               <a class="nav-item nav-link active" href="index.php">Inicio<span class="sr-only">(current)</span></a>
               <a class="nav-item nav-link active" href="FAQ.php">Preguntas frecuentes</a>
-              <p>Bienvenido
+              <p class="nav-item nav-link active">Bienvenido
               <?=$_SESSION["nombre"];?>
               </p>
-                <a class="nav-item nav-link active" href="iniciosesion.php">Perfil<span class="sr-only">(current)</span></a>
-                <img src="FotosAvatar/<?=$_SESSION["avatar"];?>" alt="foto perfil">
+              <img class = fotoAvatar src="FotosAvatar/<?=$_SESSION["avatar"];?>" alt="foto perfil">
+                <a class="nav-item nav-link active" href="#">Perfil<span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link active" href="logout.php">Cerrar sesión</a>
 
 

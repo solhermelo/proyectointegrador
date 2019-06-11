@@ -73,7 +73,7 @@
             <input id="password" type="password" name="password" value="">
           </p>
           <p>
-            <a class="olvidocontra" href="#">Olvidó su contraseña?</a>
+            <a class="olvidocontra" href="olvidePass.php">Olvidó su contraseña?</a>
           </p>
           <p>
           <label for="recordar">Recordarme</label>

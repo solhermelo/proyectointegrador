@@ -166,3 +166,12 @@ input[type="checkbox"]{
   font-weight: 500;
 
 }
+
+.olvide-contra-box{
+  position: relative;
+  margin: 5% auto;
+  height: 450px;
+  width: 600px;
+  background: #fff;
+  box-shadow: 0 2% 4px rgba(0, 0, 0, 0.6);
+}
