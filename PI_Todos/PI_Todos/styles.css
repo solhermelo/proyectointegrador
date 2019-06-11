@@ -1,0 +1,190 @@
+*{
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}
+.container2
+{
+  background-image: url(imagenes/grass.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+nav
+{
+  opacity: 0.7;
+}
+.margen
+{
+  margin-top:130px;
+}
+
+.card_title
+{
+  text-align: center;
+}
+
+.card_fill
+{
+  opacity: 0.8;
+}
+
+.div_1
+{
+  margin-top: 120px;
+  margin-left: 50px;
+  margin-bottom: 100px;
+  margin-right: 450px;
+  background-color: rgba(255,255,255,0.7) !important;
+}
+
+.titulo
+{
+  background-color: Gray;
+  opacity: 0.8;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 40px;
+  font-family: sans-serif;
+}
+
+
+.preguntas
+{
+  color:SlateGray;
+  background-color: white;
+  font-weight:lighter;
+  font-size: 25px;
+  font-family: sans-serif;
+}
+
+.respuesta
+{
+  color:SlateGray;
+  background-color: white;
+  font-weight:lighter;
+  font-size: 17px;
+  font-family: sans-serif;
+  padding-left: 17px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 17px;
+  background-color: rgba(255,255,255,0.8) !important;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.item
+{
+  width: 35px;
+  height: 35px;
+  float: left;
+  display: inline;
+}
+
+@media (min-width:360px)
+{
+  .div_1
+  {
+    width: 70%;
+  }
+  .titulo
+  {
+    font-size: 28px;
+  }
+  .preguntas
+  {
+    font-size:17px;
+  }
+  .respuesta
+  {
+    font-size: 13px;
+  }
+
+}
+
+@media (min-width:750px)
+{
+  .div_1
+  {
+    width: 70%;
+  }
+  .titulo
+  {
+    font-size: 31px;
+  }
+  .preguntas
+  {
+    font-size:19px;
+  }
+  .respuesta
+  {
+    font-size: 14px;
+  }
+
+}
+
+@media (min-width: 950px)
+{
+  .div_1
+  {
+    width: 70%;
+  }
+  .titulo
+  {
+    font-size: 34px;
+  }
+  .preguntas
+  {
+    font-size:21px;
+  }
+  .respuesta
+  {
+    font-size: 15px;
+  }
+
+
+}
+
+@media (min-width:1150px)
+{
+  .div_1
+  {
+    width: 70%;
+  }
+  .titulo
+  {
+    font-size: 37px;
+  }
+  .preguntas
+  {
+    font-size:23px;
+  }
+  .respuesta
+  {
+    font-size: 16px;
+  }
+
+}
+
+@media (min-width:1366px)
+{
+  .div_1
+  {
+    width: 70%;
+  }
+  .titulo
+  {
+    font-size: 40px;
+  }
+  .preguntas
+  {
+    font-size:25px;
+  }
+  .respuesta
+  {
+    font-size: 17px;
+  }
+
+}
