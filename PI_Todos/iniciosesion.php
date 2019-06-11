@@ -1,3 +1,38 @@
+<?php
+  require_once("funciones.php");
+  if($_POST){
+    $errores = validar($_POST,'login');
+    if(count($errores) == 0){
+
+      $usuario = buscarPorEmail($_POST["email"]);
+
+      if($usuario == null){
+        $errores["email"]= "Usuario / Contraseña invalidos";
+      }else{
+        if(password_verify($_POST["password"],$usuario["password"])==false){
+          $errores["password"]="Usuario / Contraseña invalidos";
+        }else {
+
+          seteoUsuario($usuario,$_POST);
+          if(validarAcceso()){
+            header("location: perfil.php");
+            exit;
+          }else{
+            header("location: iniciosesion.php");
+            exit;
+          }
+
+        }
+      }
+
+      }
+  }
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -14,28 +49,36 @@
      ?>
     <div class="login-box">
       <div class="left-box">
+        <?php if(isset($errores)):?>
+              <ul class="alert alert-danger">
+                <?php foreach ($errores as $key => $value) :?>
+                  <li><?=$value;?></li>
+                <?php endforeach;?>
+              </ul>
+        <?php endif;?>
+
         <h2>Inicia sesión</h2>
 
-        <form class="" action="index.php" method="post">
+        <form class="" action="iniciosesion.php" method="post">
           <p>
             <label for="email">
               Email
             </label>
-            <input id="email" type="email" name="email" value="" placeholder="xxx@xmail.com">
+            <input id="email" type="email" name="email" value="<?=isset($errores['email'])? "":persistir("email") ;?>" placeholder="xxx@xmail.com">
           </p>
           <p>
-            <label for="pass">
+            <label for="password">
               Contraseña
             </label>
-            <input id="pass" type="password" name="pass" value="">
+            <input id="password" type="password" name="password" value="">
           </p>
           <p>
             <a class="olvidocontra" href="#">Olvidó su contraseña?</a>
           </p>
           <p>
-          <label for="recordarme">Recordarme</label>
+          <label for="recordar">Recordarme</label>
 
-          <input type="checkbox" name="" value="">
+          <input type="checkbox" name="recordar" id = "recordar" value="recordar">
         </p>
           <p>
             <input type="submit" name="" value="Enviar">

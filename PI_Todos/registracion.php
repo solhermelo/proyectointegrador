@@ -1,3 +1,20 @@
+<?php
+require_once("helpers.php");
+require_once("funciones.php");
+if($_POST){
+  $errores = validar($_POST,'registro');
+  if(count($errores)== 0){
+    $avatar = armarAvatar($_FILES);
+    $usuario = armarUsuario($_POST,$avatar);
+    guardarUsuario($usuario);
+    header("location: iniciosesion.php");
+    exit;
+
+  }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -8,55 +25,70 @@
     <title>Registración</title>
   </head>
   <body>
-    <header>
-      <!--comienzo barra de navegador -->
-      <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-ligh fixed-top">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="#">¿Quien juega?</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-  </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link active" href="index.php">Inicio<span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link active" href="FAQ.php">Preguntas frecuentes</a>
-        <a class="nav-item nav-link active" href="iniciosesion.php">Iniciar sesion<span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link active" href="registracion.php">Resgistrarse</a>
-      </div>
-    </div>
-  </nav>
-  </header>
-  <!--fin barra de navegador -->
+    <?php require_once("navbar.php"); ?>
+
     <div class="login-box">
       <div class="left-box">
+
         <h2>Registrate</h2>
 
-        <form class="" action="index.php" method="post">
+        <form class="" action="registracion.php" method="post" enctype="multipart/form-data">
           <p>
             <label for="nombre">
-              Nombre
             </label>
-            <input id="nombre" type="text" name="nombre" value="" placeholder="Ingrese nombre">
+            <input id="nombre" type="text" name="nombre" value="<?= isset($errores["nombre"])? "": persistir("nombre") ?>" placeholder="Nombre:">
+
+              <?php if(isset($errores["nombre"])) :?>
+  				 <span>
+  						<?php echo $errores["nombre"] ?>
+  				 </span>
+  			     <?php endif; ?>
+
+
           </p>
           <p>
             <label for="apellido">
-              Apellido
             </label>
-              <input id="apellido" type="text" name="apellido" value="" placeholder="Ingrese apellido">
+              <input id="apellido" type="text" name="apellido" value="<?= isset($errores["apellido"])? "": persistir("apellido") ?>" placeholder="Apellido:">
+              <?php if(isset($errores["apellido"])) :?>
+        				 <span>
+        						<?php echo $errores["apellido"] ?>
+        				 </span>
+			         <?php endif; ?>
           </p>
           <p>
             <label for="email">
-              Email
             </label>
-            <input id="email" type="email" name="email" value="" placeholder="xxx@xmail.com">
+            <input id="email" type="email" name="email" value="<?= isset($errores["email"])? "": persistir("email") ?>" placeholder="Email:">
+            <?php if(isset($errores["email"])) :?>
+      				 <span>
+      						<?php echo $errores["email"] ?>
+      				 </span>
+		     	  <?php endif; ?>
           </p>
           <p>
-            <label for="pass">
-              Contraseña
+            <label for="password">
             </label>
-            <input id="pass" type="password" name="pass" value="">
+            <input id="password" type="password" name="password" value="" placeholder="Contraseña:">
+
+            <?php if(isset($errores["password"])) :?>
+      				 <span>
+      						<?php echo $errores["password"] ?>
+      				 </span>
+	         <?php endif; ?>
+          </p>
+          <p>
+            <label for="repassword">
+            </label>
+            <input id="repassword" type="password" name="repassword" value="" placeholder="Confirme contraseña:">
+            <?php if(isset($errores["repassword"])) :?>
+      				 <span>
+      						<?php echo $errores["repassword"] ?>
+      				 </span>
+			       <?php endif; ?>
+          </p>
+          <p>
+            <input type="file" name="avatar" value="">
           </p>
           <p>
             <input type="submit" name="" value="Enviar">

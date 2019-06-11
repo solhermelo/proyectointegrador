@@ -1,7 +1,6 @@
 <?php
-
+require_once("funciones.php");
  ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -17,10 +16,29 @@
 
 <body>
 
-<?php
-require_once("navbar.php");
- ?>
+  <header>
 
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">¿Quien juega?</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="navbar-nav ml-auto">
+              <a class="nav-item nav-link active" href="index.php">Inicio<span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link active" href="FAQ.php">Preguntas frecuentes</a>
+              <p>Bienvenido
+              <?=$_SESSION["nombre"];?>
+              </p>
+                <a class="nav-item nav-link active" href="iniciosesion.php">Perfil<span class="sr-only">(current)</span></a>
+                <img src="FotosAvatar/<?=$_SESSION["avatar"];?>" alt="foto perfil">
+                <a class="nav-item nav-link active" href="logout.php">Cerrar sesión</a>
+
+
+          </div>
+      </div>
+  </nav>
+  </header>
 
 
     <section>
