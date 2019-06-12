@@ -6,14 +6,14 @@ body{
   color: #777;
   font-family: sans-serif;
   font-weight: 300;
-  background-image: url(../imagenes/grass.jpg);
+  background-image: url(imagenes/grass.jpg);
   background-size: cover;
 }
 
 .login-box{
   position: relative;
   margin: 5% auto;
-  height: 450px;
+  height: 550px;
   width: 600px;
   background: #fff;
   box-shadow: 0 2% 4px rgba(0, 0, 0, 0.6);
@@ -90,8 +90,8 @@ input[type="submit"]: focus
   box-sizing: border-box;
   padding: 40px;
   width: 300px;
-  height: 450px;
-  background-image: url(../imagenes/busco_jugador.jpg);
+  height: 550px;
+  background-image: url(imagenes/busco_jugador.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -162,6 +162,9 @@ button.social
   bottom: 7px;
 }
 
+.errores-rojo{
+  color: red;
+}
 
 @@media only screen and (max-width: 1200px) {
 	.login-box{
