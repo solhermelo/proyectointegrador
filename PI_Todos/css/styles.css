@@ -1,9 +1,12 @@
 *{
     box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
 }
 .container2
 {
-  background-image: url(../imagenes/grass.jpg);
+  background-image: url(imagenes/grass.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -78,6 +81,27 @@ nav
   height: 35px;
   float: left;
   display: inline;
+}
+
+
+.contenedor-foto-perfil{
+  position: absolute;
+  top: 100px;
+  left: 500px
+}
+
+.bienvenido{
+  color: black;
+}
+
+.fotosAvatar{
+
+}
+
+.fotoPerfil{
+  width: 250px;
+  height: 200px
+
 }
 
 
