@@ -6,7 +6,7 @@
 }
 .container2
 {
-  background-image: url(imagenes/grass.jpg);
+  background-image: url(../imagenes/grass.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
