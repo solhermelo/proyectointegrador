@@ -47,7 +47,7 @@ function validar($datos,$bandera){
             $errores["avatar"]="Hubo un error al cargar la imagen";
         }
         $avatar = $_FILES["avatar"]["name"];
-        $ext = pathinfo($avatar,PATHINFO_EXTENSION);
+        $ext = strtolower(pathinfo($avatar,PATHINFO_EXTENSION));
         if($ext != "jpg" && $ext != "png" && $ext != "jpeg"){
             $errores["avatar"] = "La extensión debe ser PNG, JPEG ó JPG";
         }
@@ -61,8 +61,8 @@ function armarAvatar($imagen){
     $nombre = $imagen["avatar"]["name"];
     $ext = pathinfo($nombre,PATHINFO_EXTENSION);
     $archivoOrigen = $imagen["avatar"]["tmp_name"];
-    $archivoDestino = dirname(__DIR__);
-    $archivoDestino = $archivoDestino."../FotosAvatar/";
+    $archivoDestino = dirname(__FILE__);
+    $archivoDestino = $archivoDestino."/FotosAvatar/";
     $avatar = uniqid();
     $archivoDestino = $archivoDestino.$avatar;
     $archivoDestino = $archivoDestino.".".$ext;

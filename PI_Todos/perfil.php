@@ -14,8 +14,8 @@ if(!isset($_SESSION["email"])){
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <meta name="viewport" content="width=device-width" , "initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Proyecto</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Perfil</title>
 </head>
 
 <body>
@@ -34,8 +34,8 @@ if(!isset($_SESSION["email"])){
               <p class="nav-item nav-link active">Bienvenido
               <?=$_SESSION["nombre"];?>
               </p>
-              <img class = fotoAvatar src="FotosAvatar/<?=$_SESSION["avatar"];?>" alt="foto perfil">
-                <a class="nav-item nav-link active" href="#">Perfil<span class="sr-only">(current)</span></a>
+
+                <a class="nav-item nav-link active" href="configPerfil.php">Perfil<span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link active" href="logout.php">Cerrar sesión</a>
 
 

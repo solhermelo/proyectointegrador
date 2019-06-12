@@ -1,9 +1,10 @@
 <?php
+
 require_once("helpers.php");
 require_once("funciones.php");
 if($_POST){
   $errores = validar($_POST,'registro');
-  if(count($errores)== 0){
+  if(count($errores) == 0){
     $avatar = armarAvatar($_FILES);
     $usuario = armarUsuario($_POST,$avatar);
     guardarUsuario($usuario);
@@ -20,8 +21,8 @@ if($_POST){
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/registracion.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="registracion.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Registración</title>
   </head>
   <body>
@@ -32,60 +33,67 @@ if($_POST){
 
         <h2>Registrate</h2>
 
-        <form class="" action="registracion.php" method="post" enctype="multipart/form-data">
+        <form class="" action="" method="post" enctype="multipart/form-data">
           <p>
             <label for="nombre">
             </label>
             <input id="nombre" type="text" name="nombre" value="<?= isset($errores["nombre"])? "": persistir("nombre") ?>" placeholder="Nombre:">
-
+            <p class = "errores-rojo">
               <?php if(isset($errores["nombre"])) :?>
   				 <span>
   						<?php echo $errores["nombre"] ?>
   				 </span>
   			     <?php endif; ?>
-
+           </p>
 
           </p>
           <p>
             <label for="apellido">
             </label>
               <input id="apellido" type="text" name="apellido" value="<?= isset($errores["apellido"])? "": persistir("apellido") ?>" placeholder="Apellido:">
+            <p class = "errores-rojo">
               <?php if(isset($errores["apellido"])) :?>
         				 <span>
         						<?php echo $errores["apellido"] ?>
         				 </span>
 			         <?php endif; ?>
+             </p>
           </p>
           <p>
             <label for="email">
             </label>
             <input id="email" type="email" name="email" value="<?= isset($errores["email"])? "": persistir("email") ?>" placeholder="Email:">
+            <p class = "errores-rojo">
             <?php if(isset($errores["email"])) :?>
       				 <span>
       						<?php echo $errores["email"] ?>
       				 </span>
 		     	  <?php endif; ?>
           </p>
+          </p>
           <p>
             <label for="password">
             </label>
             <input id="password" type="password" name="password" value="" placeholder="Contraseña:">
-
+            <p class = "errores-rojo">
             <?php if(isset($errores["password"])) :?>
       				 <span>
       						<?php echo $errores["password"] ?>
       				 </span>
 	         <?php endif; ?>
+         </p>
           </p>
           <p>
             <label for="repassword">
             </label>
             <input id="repassword" type="password" name="repassword" value="" placeholder="Confirme contraseña:">
+            <p class = "errores-rojo">
             <?php if(isset($errores["repassword"])) :?>
       				 <span>
       						<?php echo $errores["repassword"] ?>
       				 </span>
 			       <?php endif; ?>
+           </p>
           </p>
           <p>
             <input type="file" name="avatar" value="">
