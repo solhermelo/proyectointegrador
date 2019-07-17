@@ -2,7 +2,10 @@
 <header>
 
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light fixed-top">
-    <a class="navbar-brand" href="#">¿Quien juega?</a>
+    <a class="navbar-brand" href="index.php">
+    <img src="imagenes/logo-quienjuega.png" width="37" height="37" alt="logo">
+  </a>
+  <a class="navbar-brand" href="index.php"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>

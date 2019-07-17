@@ -56,7 +56,7 @@ if(!isset($_SESSION["email"])){
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active" style="">
-                        <img src="IMAGENES/jugador1.jpg" class="d-block w-100" alt="...">
+                        <img src="IMAGENES/jugador10.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>ARMA EQUIPO</h5>
                             <p>Ahorra tiempo y encontrá a tu equipo para jugar donde quieras.</p>
@@ -72,7 +72,7 @@ if(!isset($_SESSION["email"])){
                         </div>
                     </div>
                     <div class="carousel-item" style="">
-                        <img src="IMAGENES/jugador4.jpg" class="d-block w-100" alt="...">
+                        <img src="IMAGENES/fotochicas.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>SUMATE A UN EQUIPO</h5>
                             <p>Si queres jugar y ser parte de un equipo contanos tus habilidades y en que posición jugas y te conectaremos con equipos que estén interesados</p>
