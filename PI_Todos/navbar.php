@@ -15,6 +15,7 @@
             <a class="nav-item nav-link active" href="registracion.php">Registrarse</a>
               <a class="nav-item nav-link active" href="iniciosesion.php">Iniciar sesion<span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link active" href="FAQ.php">Preguntas frecuentes</a>
+          
 
 
         </div>

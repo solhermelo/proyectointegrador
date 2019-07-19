@@ -146,6 +146,12 @@ button.social
   background: #dd4b39;
 }
 
+.googlelogin{
+  position: relative;
+  top: 30px;
+  right: 5px;
+}
+
 .logo-fb{
   width: 25px;
   height: 25px;

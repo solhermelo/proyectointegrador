@@ -37,7 +37,7 @@ require_once("navbar.php");
                         <div class="carousel-caption d-none d-md-block">
                             <h5>ARMA EQUIPO</h5>
                             <p>Ahorra tiempo y encontrá a tu equipo para jugar donde quieras.</p>
-                            <a class="btn btn-primary" href="registracion.php" role="button">REGISTRATE</a>
+                            <a class="btn btn-danger" href="registracion.php" role="button">REGISTRATE</a>
                         </div>
                     </div>
                     <div class="carousel-item" style="">
@@ -45,7 +45,7 @@ require_once("navbar.php");
                         <div class="carousel-caption d-none d-md-block">
                             <h5>BUSCA JUGADORES</h5>
                             <p>Si te faltan jugadores para completar tu equipo busca en nuestra base de datos por posición y disponibilidad.</p>
-                            <a class="btn btn-primary" href="#" role="button">REGISTRATE</a>
+                            <a class="btn btn-danger" href="registracion.php" role="button">REGISTRATE</a>
                         </div>
                     </div>
                     <div class="carousel-item" style="">
@@ -53,7 +53,7 @@ require_once("navbar.php");
                         <div class="carousel-caption d-none d-md-block">
                             <h5>SUMATE A UN EQUIPO</h5>
                             <p>Si queres jugar y ser parte de un equipo contanos tus habilidades y en que posición jugas y te conectaremos con equipos que estén interesados</p>
-                            <a class="btn btn-primary" href="#" role="button">REGISTRATE</a>
+                            <a class="btn btn-danger" href="registracion.php" role="button">REGISTRATE</a>
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@ require_once("navbar.php");
                     <div class="card-body">
                         <h3 class="card-title">Busco Jugador</h3>
                         <p class="card-text">¿Te falta un/a jugador/a para tu equipo? Encontralo.</p>
-                        <a class="btn btn-primary" href="#" role="button">Clickea acá</a>
+                        <a class="btn btn-danger" href="buscoJugador.php" role="button">Clickea acá</a>
                     </div>
                 </div>
                 <div class="card">
@@ -86,7 +86,7 @@ require_once("navbar.php");
                     <div class="card-body">
                         <h3 class="card-title">Busco Equipo </h3>
                         <p class="card-text">¿Querés jugar y no tenes equipo? Encontrá con quien jugar. </p>
-                        <a class="btn btn-primary" href="#" role="button">Clickea acá</a>
+                        <a class="btn btn-danger" href="buscoEquipo.php" role="button">Clickea acá</a>
                     </div>
                 </div>
                 <div class="card">
@@ -94,7 +94,7 @@ require_once("navbar.php");
                     <div class="card-body">
                         <h3 class="card-title">Armar Partido</h3>
                         <p class="card-text">Crea un partido para el dia que quieras y encontrá a todos los jugadores.</p>
-                        <a class="btn btn-primary" href="#" role="button">Clickea acá</a>
+                        <a class="btn btn-danger" href="#" role="button">Clickea acá</a>
                     </div>
                 </div>
             </div>

@@ -22,15 +22,54 @@ if($_POST){
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" , "initial-scale=1.0">
+    <!--inicio sesion google-->
+<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+        <!--fin inicio sesion google-->
     <link rel="stylesheet" href="css/registracion.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Registración</title>
   </head>
   <body>
+
+<!--incio sesion con fb-->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '{848601688855431}',
+          cookie     : true,
+          xfbml      : true,
+          version    : '{v3.3}'
+        });
+
+        FB.AppEvents.logPageView();
+
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.3&appId=848601688855431&autoLogAppEvents=1"></script>
+
+    <!--incio sesion con fb-->
+
+    <!--inicio sesion google-->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!--inicio sesion google-->
+
+
     <?php require_once("navbar.php"); ?>
 
     <div class="login-box">
-      
+
       <div class="left-box">
 
         <h2>Registrate</h2>
@@ -109,16 +148,38 @@ if($_POST){
       <div class="right-box">
         <span class="signin-with">Registrate con Redes Sociales <br>
         </span>
-        <button class="social facebook" type="button" name="button">
-          <img class="logo-fb" src="imagenes/logo-fb.jpg" alt="logo facebook">
-          Facebook
-        </button>
+
+<!--login fb-->
+        <div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with" data-auto-logout-link="false" data-use-continue-as="true"></div>
+<!--login fb-->
 
         <br>
-        <button class="social google" type="button" name="button">
-          <img class="logo-google" src="imagenes/logo-google.jpg" alt="logo Google">
-          Google
-        </button>
+
+
+<!--login google-->
+        <div class = "googlelogin" id="my-signin2"></div>
+  <script>
+    function onSuccess(googleUser) {
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+    }
+    function onFailure(error) {
+      console.log(error);
+    }
+    function renderButton() {
+      gapi.signin2.render('my-signin2', {
+        'scope': 'profile email',
+        'width': 195,
+        'height': 30,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+  </script>
+
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+<!--login google-->
 
       </div>
       <div class="sino">Sino
