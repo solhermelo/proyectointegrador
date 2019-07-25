@@ -20,7 +20,7 @@ class usuario {
       $this->nombre = $nombre;
     }
     public function getApellido(){
-      return $this->descripcion;
+      return $this->apellido;
     }
     public function setApellido($apellido){
       $this->apellido = $apellido;

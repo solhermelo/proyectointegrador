@@ -5,7 +5,7 @@ require_once 'clases/usuario.php';
 require_once 'clases/helpers.php';
 
 $host = "localhost";
-$db_nombre = "";
+$db_nombre = "quienjuega";
 $usuario = "root";
 $password = "root";
 $puerto = "8888";
