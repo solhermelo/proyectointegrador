@@ -18,7 +18,8 @@ class Mysql extends BaseDatos {
     $query->bindValue(':nombre', $usuario->getNombre());
     $query->bindValue(':apellido', $usuario->getApellido());
     $query->bindValue(':email', $usuario->getEmail());
-    $query->bindValue(':usuario', $usuario->getArchivo());
+    $query->bindValue(':email', $usuario->getPassword());
+    $query->bindValue(':usuario', $usuario->getAvatar());
     $query->execute();
   }
 

@@ -3,7 +3,7 @@
 require_once("funciones.php");
 require_once("autoload.php");
 if($_POST){
-  $usuario = new Usuario($_POST['nombre'], $_POST['apellido'], $_POST['email'], $_POST['archivo']);
+  $usuario = new Usuario($_POST['nombre'], $_POST['apellido'], $_POST['email'], $_POST['password'], $_POST['avatar']);
     MySql::guardarProducto($pdo,'usuario',$usuario);
 }
 if($_POST){
