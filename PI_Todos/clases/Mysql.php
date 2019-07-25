@@ -13,13 +13,13 @@ class Mysql extends BaseDatos {
     }
   }
   static public function guardarProducto($pdo,$tabla,$producto){
-    $sql = "insert into $tabla (nombre, apellido, email, archivo) values (:nombre, :apellido, :email, :archivo)";
+    $sql = "insert into $tabla (nombre, apellido, email, password, avatar) values (:nombre, :apellido, :email, :password, :avatar)";
     $query = $pdo->prepare($sql);
     $query->bindValue(':nombre', $usuario->getNombre());
     $query->bindValue(':apellido', $usuario->getApellido());
     $query->bindValue(':email', $usuario->getEmail());
-    $query->bindValue(':email', $usuario->getPassword());
-    $query->bindValue(':usuario', $usuario->getAvatar());
+    $query->bindValue(':password', $usuario->getPassword());
+    $query->bindValue(':avatar', $usuario->getAvatar());
     $query->execute();
   }
 
