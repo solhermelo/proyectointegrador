@@ -1,7 +1,7 @@
 <?php
-require_once ("clases/BaseDato.php");
+require_once ("clases/BaseDatos.php");
 require_once ("clases/Mysql.php");
-require_once 'clases/producto.php';
+require_once 'clases/usuario.php';
 require_once 'clases/helpers.php';
 
 $host = "localhost";
