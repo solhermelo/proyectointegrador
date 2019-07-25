@@ -1,7 +1,11 @@
 <?php
 
-require_once("helpers.php");
 require_once("funciones.php");
+require_once("autoload.php");
+if($_POST){
+  $usuario = new Usuario($_POST['nombre'], $_POST['apellido'], $_POST['email'], $_POST['archivo']);
+    MySql::guardarProducto($pdo,'usuario',$usuario);
+}
 if($_POST){
   $errores = validar($_POST,'registro');
   if(count($errores) == 0){
@@ -13,6 +17,7 @@ if($_POST){
 
   }
 }
+
 
 ?>
 

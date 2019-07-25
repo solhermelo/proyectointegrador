@@ -11,3 +11,7 @@ function persistir($input){
        return $_POST[$input];
     }
 }
+function redirect($ruta){
+    header("location:".$ruta);
+    exit;
+}
