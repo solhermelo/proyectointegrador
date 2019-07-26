@@ -1,16 +1,14 @@
 <?php
-require_once
-require_once
-require_once 
 require_once ("helpers.php");
 require_once ("clases/encriptar.php");
 require_once ("clases/validador.php");
+require_once ("clases/baseMySQL.php");
 
 $host = "localhost";
-$db_nombre = "quienjuega";
-$usuario = "root";
-$password = "root";
+$dbname = "quienjuega";
 $puerto = "8889";
+$usuario = "root";
+$pass = "root";
 $charset = "utf8mb4";
 
-$pdo = MySql::conexion($host,$db_nombre,$usuario,$password,$puerto,$charset);
+$pdo = BaseMYSQL::conexion($host, $dbname, $puerto, $usuario, $pass, $charset);

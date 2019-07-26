@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("clases/helpers.php");
+require_once("helpers.php");
 function validar($datos,$bandera){
 
     $errores = [];
