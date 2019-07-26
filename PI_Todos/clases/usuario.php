@@ -37,14 +37,11 @@ class usuario {
     public function setAvatar($avatar){
       $this->avatar = $avatar;
     }
-    }
     public function getPassword(){
       return $this->password;
     }
     public function setPassword($password){
       $this->password = $password;
     }
-
-
 }
  ?>
