@@ -4,6 +4,7 @@ require_once ("clases/Mysql.php");
 require_once ('clases/usuario.php');
 require_once ('clases/helpers.php');
 require_once ('clases/encriptar.php');
+require_once ('clases/validador.php');
 
 $host = "localhost";
 $db_nombre = "quienjuega";
