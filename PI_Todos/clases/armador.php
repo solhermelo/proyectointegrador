@@ -1,5 +1,5 @@
 <?php
-class ArmarRegistro{
+class Armador{
     public function armarAvatar($imagen){
         $nombre = $imagen["avatar"]["name"];
         $ext = pathinfo($nombre,PATHINFO_EXTENSION);
