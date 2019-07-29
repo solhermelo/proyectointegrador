@@ -3,10 +3,24 @@
 require_once("funciones.php");
 require_once("autoload.php");
 if($_POST){
-  $usuario = new Usuario($_POST['nombre'], $_POST['apellido'], $_POST['email'], $_POST['password'], $_FILES['avatar']);
+  $usuario = new Usuario($_POST['nombre'], $_POST['apellido'], $_POST['email'], $_POST['password'], $_POST['repassword'], $_FILES['avatar']);
 
-  $errores = $validar->validar($usuario, $_POST['repassword']);
-    MySql::guardarProducto($pdo,$usuario,'usuarios', $avatar);
+  $errores = $validar->validarUsuario($usuario, $_POST['repassword']);
+  if(count($errores) == 0){
+    $usuarioEncontrado = BaseMYSQL::buscarPorEmail($usuario->getEmail(),$pdo,'users');
+  if($usuarioEncontrado != false){
+    $errores["email"]= "Usuario ya Registrado";
+  }else{
+
+      $avatar = $registro->armarAvatar($usuario->getAvatar());
+
+      BaseMYSQL::guardarUsuario($pdo,$usuario,'users',$avatar);
+
+      redirect ("login.php");
+    }
+}
+
+    MySql::guardarUsuario($pdo, $usuario,'usuarios', $avatar);
 }
 if($_POST){
   $errores = validar($_POST,'registro');
