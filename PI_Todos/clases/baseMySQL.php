@@ -11,8 +11,9 @@ class BaseMYSQL{
     }
   }
 
-  static public function guardarUsuario($baseDeDatos, $pdo, $usuario, $avatar){
-    $query = $baseDeDatos->prepare("insert into usuario (nombre, apellido, email, password, avatar) values (:nombre, :apellido, :email, :password, :avatar)");
+  static public function guardarUsuario($tabla, $baseDeDatos, $usuario, $avatar){
+    $sql = "insert into $tabla (nombre, apellido, email, password, avatar) values (:nombre, :apellido, :email, :password, :avatar)";
+    $query = $baseDeDatos->prepare($sql);
     $query->bindValue (":nombre", $usuario->getNombre());
     $query->bindValue (":apellido", $usuario->getApellido());
     $query->bindValue (":email", $usuario->getEmail());
