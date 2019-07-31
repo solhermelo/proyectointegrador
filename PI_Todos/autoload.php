@@ -5,6 +5,8 @@ require_once ("clases/usuario.php");
 require_once ("clases/encriptar.php");
 require_once ("clases/validador.php");
 require_once ("clases/armarRegistro.php");
+require_once ("clases/autenticador.php");
+
 
 $host = "localhost";
 $dbname = "quienjuega";
@@ -17,3 +19,4 @@ $pdo = BaseMYSQL::conexion($host, $dbname, $puerto, $usuario, $pass, $charset);
 
 $validar = new Validador();
 $registro = new ArmarRegistro();
+Autenticador::iniciarSession();

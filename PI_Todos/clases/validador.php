@@ -4,6 +4,7 @@ class Validador{
   public function validarUsuario($usuario){
 
       $errores = array();
+
       $nombre = trim($usuario->getNombre());
       if(isset($nombre)){
           if(empty($nombre)){

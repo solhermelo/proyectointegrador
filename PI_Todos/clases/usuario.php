@@ -7,7 +7,7 @@ class Usuario{
   private $repassword;
   private $avatar;
 
-  public function __construct($nombre=null, $apellido=null, $email, $password, $repassword=null,  $avatar=null){
+  public function __construct($email, $password, $nombre=null, $apellido=null, $repassword=null, $avatar=null){
     $this->nombre = $nombre;
     $this->apellido = $apellido;
     $this->email = $email;

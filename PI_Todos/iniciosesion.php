@@ -1,35 +1,29 @@
 <?php
-  require_once("funciones.php");
+  require_once("autoload.php");
   if($_POST){
-    $errores = validar($_POST,'login');
-    if(count($errores) == 0){
-
-      $usuario = buscarPorEmail($_POST["email"]);
-
-      if($usuario == null){
-        $errores["email"]= "Usuario / Contraseña invalidos";
-      }else{
-        if(password_verify($_POST["password"],$usuario["password"])==false){
-          $errores["password"]="Usuario / Contraseña invalidos";
-        }else {
-
-          seteoUsuario($usuario,$_POST);
-          if(validarAcceso()){
-            header("location: perfil.php");
-            exit;
+    $usuario = new Usuario($_POST["email"], $_POST["password"]);
+    $errores = $validar->validacionLogIn($usuario);
+    if(count($errores)==0){
+        $usuarioEncontrado = BaseMYSQL::buscarPorEmail($usuario->getEmail(),$pdo,'usuarios');
+        if($usuarioEncontrado == false){
+          $errores["email"]="Usuario no registrado";
+        }else{
+          if(Autenticador::verificarPassword($usuario->getPassword(),$usuarioEncontrado["password"] )!=true){
+            $errores["password"]="Error en los datos verifique";
           }else{
-            header("location: iniciosesion.php");
-            exit;
+            Autenticador::seteoSesion($usuarioEncontrado);
+            if(isset($_POST["recordar"])){
+              Autenticador::seteoCookie($usuarioEncontrado);
+            }
+            if(Autenticador::validarUsuario()){
+              header("location: perfil.php");
+            }else{
+              redirect("registracion.php");
+            }
           }
-
         }
       }
-
-      }
   }
-
-
-
 ?>
 
 
