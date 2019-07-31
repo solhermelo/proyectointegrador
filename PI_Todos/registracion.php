@@ -1,6 +1,5 @@
 <?php
 
-require_once("funciones.php");
 require_once("autoload.php");
 if($_POST){
   $usuario = new Usuario($_POST['nombre'], $_POST['apellido'], $_POST['email'], $_POST['password'], $_POST['repassword'], $_FILES['avatar']);
@@ -20,17 +19,6 @@ if($_POST){
     }
 }
 
-}
-if($_POST){
-  $errores = validar($_POST,'registro');
-  if(count($errores) == 0){
-    $avatar = armarAvatar($_FILES);
-    $usuario = armarUsuario($_POST,$avatar);
-    guardarUsuario($usuario);
-    header("location: iniciosesion.php");
-    exit;
-
-  }
 }
 
 

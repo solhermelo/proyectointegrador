@@ -4,21 +4,20 @@ class Validador{
   public function validarUsuario($usuario){
 
       $errores = array();
-
-      if(isset($datos["nombre"])){
-          $nombre = trim($usuario->getNombre());
+      $nombre = trim($usuario->getNombre());
+      if(isset($nombre)){
           if(empty($nombre)){
               $errores["nombre"]="Tienes que completar tu nombre";
           }
       }
-      if(isset($datos["apellido"])){
-          $apellido = trim($usuario->getApellido());
+      $apellido = trim($usuario->getApellido());
+      if(isset($apellido)){
           if(empty($apellido)){
               $errores["apellido"]="Tienes que completar tu apellido";
           }
       }
-      if(isset($datos["email"])){
-          $email = trim($usuario->getEmail());
+        $email = trim($usuario->getEmail());
+      if(isset($email)){
           if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
             $errores["email"]="El email no es válido";
           }
@@ -26,15 +25,16 @@ class Validador{
       }
 
       $password = trim($usuario->getPassword());
-      if(isset($datos["password"])){
+      if(isset($password)){
           if(empty($password)){
               $errores["password"] = "El password no puede estar vacio";
           }elseif(strlen($password)<8){
               $errores["password"]="El password debe tener más de 8 cacteres";
           }
       }
-      if(isset($datos["repassword"])){
-          $repassword = trim($usuario->getRepassword());
+
+      $repassword = trim($usuario->getRepassword());
+      if(isset($repassword)){
           if(empty($repassword)){
               $errores["repassword"]= "El campo no debe estar vacio";
           }
@@ -58,6 +58,26 @@ class Validador{
 
       return $errores;
   }
+
+
+  public function validacionLogin($usuario){
+      $errores=array();
+
+      $email = trim($usuario->getEmail());
+      if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+          $errores["email"]="Email invalido !!!!!";
+      }
+
+      $password= trim($usuario->getPassword());
+      if(empty($password)){
+          $errores["password"]= "El password no puede estar vacio";
+      }elseif (strlen($password)<8) {
+          $errores["password"]="La contraseña debe tener como mínimo 8 caracteres";
+      }
+
+      return $errores;
+    }
+
 
   public function validarAcceso(){
       if(isset($_SESSION["email"])){
