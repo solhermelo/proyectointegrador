@@ -11,19 +11,19 @@ class BaseMYSQL{
     }
   }
 
-  static public function guardarUsuario($tabla, $baseDeDatos, $usuario, $avatar){
+  static public function guardarUsuario($pdo, $usuario, $tabla, $avatar){
     $sql = "insert into $tabla (nombre, apellido, email, password, avatar) values (:nombre, :apellido, :email, :password, :avatar)";
-    $query = $baseDeDatos->prepare($sql);
-    $query->bindValue (":nombre", $usuario->getNombre());
-    $query->bindValue (":apellido", $usuario->getApellido());
-    $query->bindValue (":email", $usuario->getEmail());
-    $query->bindValue (":password", Encriptar::hashPassword($usuario->getPassword()));
-    $query->bindValue (":avatar", $avatar);
+    $query = $pdo->prepare($sql);
+    $query->bindValue (':nombre', $usuario->getNombre());
+    $query->bindValue (':apellido', $usuario->getApellido());
+    $query->bindValue (':email', $usuario->getEmail());
+    $query->bindValue (':password', Encriptar::hashPassword($usuario->getPassword()));
+    $query->bindValue (':avatar', $avatar);
     $query->execute();
   }
 
   static public function buscarPorEmail($email,$pdo,$tabla){
-    $query = $pdo->prepare("select * from usuario where email = :email");
+    $query = $pdo->prepare("select * from $tabla where email = :email");
     $query->bindValue(":email", $email);
     $query->execute();
     $usuario = $query->fetch(PDO::FETCH_ASSOC);

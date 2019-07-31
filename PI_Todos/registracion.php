@@ -7,20 +7,19 @@ if($_POST){
 
   $errores = $validar->validarUsuario($usuario, $_POST['repassword']);
   if(count($errores) == 0){
-    $usuarioEncontrado = BaseMYSQL::buscarPorEmail($usuario->getEmail(),$pdo,'users');
+    $usuarioEncontrado = BaseMYSQL::buscarPorEmail($usuario->getEmail(),$pdo,'usuarios');
   if($usuarioEncontrado != false){
     $errores["email"]= "Usuario ya Registrado";
   }else{
 
       $avatar = $registro->armarAvatar($usuario->getAvatar());
 
-      BaseMYSQL::guardarUsuario($pdo,$usuario,'users',$avatar);
+      BaseMYSQL::guardarUsuario($pdo,$usuario,'usuarios',$avatar);
 
-      redirect ("login.php");
+      redirect ("iniciosesion.php");
     }
 }
 
-    MySql::guardarUsuario($pdo, $usuario,'usuarios', $avatar);
 }
 if($_POST){
   $errores = validar($_POST,'registro');

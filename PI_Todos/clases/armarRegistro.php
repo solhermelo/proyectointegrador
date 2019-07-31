@@ -16,10 +16,10 @@ class ArmarRegistro{
 
   public function armarUsuario($datos,$avatar){
       $usuario = [
-          "nombre"=>$datos["nombre"],
-          "apellido"=>$datos["apellido"],
-          "email"=>$datos["email"],
-          "password"=>password_hash($datos["password"],PASSWORD_DEFAULT),
+          "nombre"=>$usuario->getNombre(),
+          "apellido"=>$usuario->getApellido(),
+          "email"=>$usuario->getEmail(),
+          "password"=>password_hash($usuarios->getPassword(),PASSWORD_DEFAULT),
           "avatar"=>$avatar,
           "perfil"=>1
       ];
