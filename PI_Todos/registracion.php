@@ -16,7 +16,7 @@ if($_POST){
 
       BaseMYSQL::guardarUsuario($pdo,$usuario,'usuarios',$avatar);
 
-      redirect ("iniciosesion.php");
+      header ("location: iniciosesion.php");
     }
 }
 
