@@ -32,16 +32,22 @@ require_once("funciones.php");
                 </div>
             </div>
         </nav>
-        </header>
+  </header>
+
+<section>
+    <div class="contenedor-foto-perfil">
+      <div class="fotoAvatar">
+        <h1 class="bienvenido">Bienvenido <?=$_SESSION["nombre"];?></h1>
+        <img class = "fotoPerfil" src="FotosAvatar/<?=$_SESSION["avatar"];?>" alt="foto perfil">
+      </div>
+    </div>
+</section>
 
 
-<div class="contenedor-foto-perfil">
-  <div class="fotoAvatar">
-    <h1 class="bienvenido">Bienvenido <?=$_SESSION["nombre"];?></h1>
-    <img class = "fotoPerfil" src="FotosAvatar/<?=$_SESSION["avatar"];?>" alt="foto perfil">
-  </div>
-</div>
 
+<?php
+require_once("footer.php")
+?>
 
   </body>
 </html>

@@ -65,7 +65,7 @@ class Validador{
 
       $email = trim($usuario->getEmail());
       if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-          $errores["email"]="Email invalido !!!!!";
+          $errores["email"]="Email invalido";
       }
 
       $password= trim($usuario->getPassword());
