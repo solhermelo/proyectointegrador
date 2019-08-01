@@ -14,14 +14,13 @@ class ArmarRegistro{
       return $avatar;
   }
 
-  public function armarUsuario($datos,$avatar){
+  public function armarUsuario($registro,$avatar){
       $usuario = [
-          "nombre"=>$usuario->getNombre(),
-          "apellido"=>$usuario->getApellido(),
-          "email"=>$usuario->getEmail(),
+          "nombre"=>$registro->getNombre(),
+          "apellido"=>$registro->getApellido(),
+          "email"=>$registro->getEmail(),
           "password"=>password_hash($usuarios->getPassword(),PASSWORD_DEFAULT),
           "avatar"=>$avatar,
-          "perfil"=>1
       ];
       return $usuario;
   }

@@ -1,5 +1,6 @@
 <?php
   require_once("autoload.php");
+  
   if($_POST){
     $usuario = new Usuario($_POST["email"], $_POST["password"]);
     $errores = $validar->validacionLogIn($usuario);
