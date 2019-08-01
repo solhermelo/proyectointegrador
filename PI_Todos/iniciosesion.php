@@ -1,7 +1,8 @@
 <?php
   require_once("autoload.php");
+
   if($_POST){
-    $usuario = new Usuario($_POST["email"], $_POST["password"]);
+    $usuario = new Usuario($_POST["nombre"]=null, $_POST["apellido"]=null, $_POST["email"], $_POST["password"], $_POST["repassword"]=null);
     $errores = $validar->validacionLogIn($usuario);
     if(count($errores)==0){
         $usuarioEncontrado = BaseMYSQL::buscarPorEmail($usuario->getEmail(),$pdo,'usuarios');

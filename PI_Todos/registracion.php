@@ -1,10 +1,10 @@
 <?php
-
 require_once("autoload.php");
 if($_POST){
   $usuario = new Usuario($_POST['nombre'], $_POST['apellido'], $_POST['email'], $_POST['password'], $_POST['repassword'], $_FILES['avatar']);
 
   $errores = $validar->validarUsuario($usuario, $_POST['repassword']);
+
   if(count($errores) == 0){
     $usuarioEncontrado = BaseMYSQL::buscarPorEmail($usuario->getEmail(),$pdo,'usuarios');
   if($usuarioEncontrado != false){
@@ -30,16 +30,18 @@ if($_POST){
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" , "initial-scale=1.0">
-    <!--inicio sesion google-->
+    <!--inicio sesion google
+
 <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-        <!--fin inicio sesion google-->
+
+        <!fin inicio sesion google-->
     <link rel="stylesheet" href="css/registracion.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Registración</title>
   </head>
   <body>
 
-<!--incio sesion con fb-->
+<!--script incio sesion con fb-->
     <script>
       window.fbAsyncInit = function() {
         FB.init({
@@ -67,11 +69,11 @@ if($_POST){
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.3&appId=848601688855431&autoLogAppEvents=1"></script>
 
-    <!--incio sesion con fb-->
+    <!--fin script incio sesion con fb-->
 
-    <!--inicio sesion google-->
+    <!--script inicio sesion google-->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <!--inicio sesion google-->
+    <!--fin script inicio sesion google-->
 
 
     <?php require_once("navbar.php"); ?>
@@ -157,15 +159,15 @@ if($_POST){
         <span class="signin-with">Registrate con Redes Sociales <br>
         </span>
 
-<!--login fb-->
+<!--login fb
         <div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with" data-auto-logout-link="false" data-use-continue-as="true"></div>
-<!--login fb-->
+<!login fb-->
 
-        <br>
+<!--        <br>
 
 
 <!--login google-->
-        <div class = "googlelogin" id="my-signin2"></div>
+<!--        <div class = "googlelogin" id="my-signin2"></div>
   <script>
     function onSuccess(googleUser) {
       console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
@@ -184,7 +186,15 @@ if($_POST){
         'onfailure': onFailure
       });
     }
-  </script>
+  </script>-->
+
+  <button class="social facebook" type="button" name="button"> <img class="logo-fb" src="imagenes/logo-fb.jpg" alt="logo facebook">
+  Facebook
+  </button>
+  <br>
+
+  <button class="social google" type="button" name="button"> <img class="logo-google" src="imagenes/logo-google.jpg" alt="logo Google"> Google
+  </button>
 
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 <!--login google-->
@@ -192,8 +202,8 @@ if($_POST){
       </div>
       <div class="sino">Sino
       </div>
-
-
+      </div>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
