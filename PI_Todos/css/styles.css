@@ -1,4 +1,3 @@
-
 .carousel-inner img{
   width: 100%;
   max-height: 760px;
@@ -10,10 +9,11 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-nav
+.bg-dark
 {
-  opacity: 0.7;
+  background-color: rgba(0,0,0,0.6)!important;
 }
+
 .margen
 {
   margin-top:130px;
@@ -32,10 +32,12 @@ nav
 .div_1
 {
   margin-top: 120px;
-  margin-left: 50px;
   margin-bottom: 100px;
-  margin-right: 450px;
+  max-width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
   background-color: rgba(255,255,255,0.7) !important;
+  text-align: center;
 }
 
 .titulo
@@ -45,7 +47,7 @@ nav
   color: white;
   border-radius: 5px;
   padding: 10px;
-  font-size: 40px;
+  font-size: 30px;
   font-family: sans-serif;
 }
 
@@ -64,7 +66,7 @@ nav
   color:SlateGray;
   background-color: white;
   font-weight:lighter;
-  font-size: 17px;
+  font-size: 15px;
   font-family: sans-serif;
   padding-left: 17px;
   padding-top: 3px;
@@ -104,41 +106,45 @@ nav
 
 }
 
-.section{
-  height: 1100px;
+.section1{
+  /* height: 1100px; */
   background-image: url(sitemap.xml);
+  position: relative;
+  /*min-height: 100vh;*/
 
 }
 .footer{
-  border: solid 2px grey;
   width: 100%;
-  height: 150px;
+  height: 110px;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
   padding: 10px;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .links{
   position: absolute;
   left: 100px;
   margin-top: 20px;
-  color: #4d4d4d;
+  color: white;
   font-size: 13px;
   text-decoration: underline;
+  font-family: sans-serif;
 }
 .img-footer{
-  width: 100px;
-  heigth: 100px;
+  width: 90px;
+  heigth: 90px;
   position: absolute;
-  bottom: 20px;
-  left: 590px;
+  bottom: 10px;
+  margin-left: 50%;
+  margin-right: 50%
+
 }
 
 .rrss{
   float:right;
+  color: white;
 }
 
 .sectionBuscoJugador{
@@ -165,7 +171,7 @@ align-items: center;
 }
 
 
-@media (min-width:360px)
+@media (max-width:360px)
 {
   .div_1
   {
@@ -186,7 +192,7 @@ align-items: center;
 
 }
 
-@media (min-width:750px)
+@media (max-width:750px)
 {
   .div_1
   {
@@ -207,7 +213,7 @@ align-items: center;
 
 }
 
-@media (min-width: 950px)
+@media (max-width: 950px)
 {
   .div_1
   {
@@ -229,7 +235,7 @@ align-items: center;
 
 }
 
-@media (min-width:1150px)
+@media (max-width:1150px)
 {
   .div_1
   {
@@ -250,7 +256,7 @@ align-items: center;
 
 }
 
-@media (min-width:1366px)
+@media (max-width:1366px)
 {
   .div_1
   {
