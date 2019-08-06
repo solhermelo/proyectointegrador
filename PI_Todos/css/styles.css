@@ -141,24 +141,6 @@ nav
   float:right;
 }
 
-.sectionBuscoJugador{
-  height: 700px;
-}
-
-.buscojugador{
-  display: inline-inline-flex;
-  background: #fff;
-  width: 600px;
-  height: 550px;
-  position: relative;
-  top: 100px;
-  border-radius: 3px;
-}
-
-.formbuscojugador{
-align-items: center;
-}
-
 .cardbuscoequipo{
   position: relative;
   top: 100px;

@@ -11,9 +11,9 @@ require_once ("clases/preguntas.php");
 
 $host = "localhost";
 $dbname = "quienjuega";
-$puerto = "3306";
+$puerto = "8889";
 $usuario = "root";
-$pass = "";
+$pass = "root";
 $charset = "utf8mb4";
 
 $pdo = BaseMYSQL::conexion($host, $dbname, $puerto, $usuario, $pass, $charset);
