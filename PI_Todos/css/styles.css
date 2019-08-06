@@ -147,6 +147,11 @@
   color: white;
 }
 
+.sectionBuscoJugador{
+  height: 800px;
+  display: flex;
+}
+
 .cardbuscoequipo{
   position: relative;
   top: 100px;
