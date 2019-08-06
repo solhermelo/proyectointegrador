@@ -22,7 +22,7 @@ $preguntas = PreguntasFrecuentes::obtenerPreguntas($pdo);
     <?php require_once("navbar.php"); ?>
 
     <div class="div_1 shadow p-3 mb-5 bg-white rounded">
-          <h1 class="titulo">Preguntas Frecuentes</h1>
+          <h1 class="titulo">PREGUNTAS FRECUENTES</h1>
           <br>
 
           <?php foreach($preguntas as $pregunta): ?>
