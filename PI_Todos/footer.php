@@ -3,8 +3,7 @@
       <p>¿Quiénes somos?</p>
     </a>
       <br>
-    <a class="links" href="#">
-      <p>Preguntas frecuentes</p>
+    <a class="links" href="FAQ.php">Preguntas Frecuentes</a>
     </a>
       <br>
     <a class="links" href="#">

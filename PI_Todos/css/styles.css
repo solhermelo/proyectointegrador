@@ -1,6 +1,37 @@
+/* HERNI */
+
+a:hover {
+  color: white!important;
+  text-decoration: none;
+  background-color: transparent;
+}
+
 .carousel-inner img{
   width: 100%;
   max-height: 760px;
+}
+
+h5
+{
+  font-size: 35px;
+}
+
+.pie{
+  font-size: 20px;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 25%;
+    bottom: 40px;
+    left: 25%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    color: rgb(0,0,0,1);
+    text-align: center;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 5px;
 }
 
 .container2
@@ -12,6 +43,11 @@
 .bg-dark
 {
   background-color: rgba(0,0,0,0.6)!important;
+}
+.boton
+{
+  color: white;
+  font-size: 20px!important;
 }
 
 .margen
