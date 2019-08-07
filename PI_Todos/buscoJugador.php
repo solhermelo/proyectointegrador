@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <meta name="viewport" content="width=device-width" , "initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/buscoJugador.css">
 
     <title>Busco Jugador</title>
   </head>
@@ -22,7 +22,7 @@
 
     <!--formulario -->
     <div class="buscojugador">
-    <h1>Busco jugador</h1>
+    <h2 class="titulo1">Busco jugador</h1>
     <form class="formbuscojugador" action="buscoJugador.php" method="post">
       <p>
         <label for="nombre equipo">Nombre del equipo</label>
@@ -111,7 +111,7 @@
         </p>
 
         <p>
-          <label for="cantidad jugadores">Cantidad de jugadores</label>
+          <label for="cantidad jugadores">Cantidad jugadores</label>
             <select class="" name="cantidad jugadores">
               <option value="1">1</option>
               <option value="2">2</option>

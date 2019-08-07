@@ -184,21 +184,8 @@ h5
 }
 
 .sectionBuscoJugador{
-  height: 700px;
-}
-
-.buscojugador{
-  display: inline-inline-flex;
-  background: #fff;
-  width: 600px;
-  height: 550px;
-  position: relative;
-  top: 100px;
-  border-radius: 3px;
-}
-
-.formbuscojugador{
-align-items: center;
+  height: 800px;
+  display: flex;
 }
 
 .cardbuscoequipo{
